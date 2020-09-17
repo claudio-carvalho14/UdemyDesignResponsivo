@@ -1,0 +1,52 @@
+.formulario{
+    background-color: #efecec;
+    /* Os próximos dois comandos fazem os elementos colarem nas extremidades do navegador*/
+    margin-left: -15px; 
+    margin-right: -15px;
+    padding: 40px 15px 40px 15px;/*Afasta SOMENTE O CONTEÚDO da borda da página, sendo a ordem CIMA, DIREITA, BAIXO e ESQUERDA*/
+    box-shadow: 0 3px 5px 0 #989898;/* Primeiro zero= Distancia Horizontal / Segundo = Distância Vertical / 5px = Controla a desfocagem. Quando menos, mais concentrada fica a cor
+    0 = Expansão da borda / #000 = cor da borda*/
+    /* Dá pra colocar o valor INSET antes do comendo para indicar a somba interna. EX: box-shadow: inset 0 3px 5px 0 #989898;*/
+}
+.formulario__grupo{
+    margin-bottom: 15px;
+}
+.formulario__campo{
+    width: 100%; /*Faz com que a largura do elemento ocupe todo o seu conteiner*/
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 10px 5px;/*Sendo o 10px CIMA e BAIXO e o 5px DIREITA e ESQUERDA*/
+}
+.formulario__label{
+    color: #343434;
+}
+.formulario__botao{
+    border: 3px solid #f00;
+    border-radius: 300px;
+    background-color: #fff;
+    color: #f00;
+    padding: 5px 20px; /*Sendo o 5px CIMA e BAIXO e o 20px DIREITA e ESQUERDA*/
+    cursor: pointer;/*Muda o cursor pra mãozinha*/
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+.mapa{
+    /* Toda DIV transforma o elemento num bloco e todo bloco (block) ocupa a largura inteira da tela*/
+    /*Gambiarra para tornar conteúdo responsivo*/
+    background-color: #f00;
+    height: 0;
+    padding-bottom: 50%;/*Garante que a proporção do item seja ampliada ou diminuida de acordo com a tela*/
+    position: relative;
+    overflow: hidden;
+    /* O próximo comando faze os elementos colarem nas extremidades do navegador*/
+    margin: 0 -15px -25px -15px;
+}
+
+.mapa iframe{
+    width: 100% !important;/*Faz com que as propriedades de altura e largura sejam sobrescritas*/
+    height: 100%;
+    position: absolute;
+    top: 0;/*Boas práticas*/
+    left: 0;/*Boas práticas*/
+}

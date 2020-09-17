@@ -1,0 +1,52 @@
+/*Section de depoimentos*/
+.depoimentos{
+    background-color: $cor-principal;
+    background-image: url(../img/cabecalho-pagina-bg.jpg);
+    background-attachment: fixed;
+    color: #fff;
+    padding: 30px 0;
+    @media(min-width: $breakpoint-md){
+        padding: 150px 0;
+        .depoimentos__img{
+            float: left;
+            margin-right: 15px;
+        }
+        .depoimentos__pessoa{
+            text-align: left;
+        }
+        .depoimentos__item{
+            max-width: 700px;/*Delimita o tamanho máximo de largura*/
+            margin: 0 auto;
+        }
+    }
+}
+.depoimentos__caixa{
+    max-width: 700px;
+    margin: 0 auto;
+}
+// .depoimentos__item{
+    // padding: 0 15px;
+// }
+.depoimentos__img{
+    margin: 0 auto;
+    display: block;
+    box-shadow: 3px 3px black;
+    margin-bottom: 30px;
+}
+.depoimentos__texto{
+    line-height: 24px; /*Aumenta a distências entre as linhas do texto*/
+    margin-bottom: 30px;
+}
+.depoimentos__texto::before{
+    background: url('../img/aspas.png') no-repeat;
+    content: '';
+    display: inline-block;/*Seta o elemento no início da linha, como um elemento do tipo bloco*/
+    width: 25px;
+    height: 23px;
+    margin-right: 4px;
+}
+.depoimentos__pessoa{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}

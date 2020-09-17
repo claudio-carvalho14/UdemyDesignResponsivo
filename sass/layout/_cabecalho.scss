@@ -1,0 +1,23 @@
+/*Cabeçalho*/
+.cabecalho{
+    background: #ffffff;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;/*Resolve problema de empilhamento e sobreposição*/
+    box-shadow: 0 0 7px 0 rgba(0,0,0,0.8);
+    @media(min-width: $breakpoint-md){
+        min-height: 100px;
+        .logo{
+            float: left;
+            margin-top: 10px;
+        }
+        .menu-principal{
+            float: right;
+            margin-top: 12px;
+            &__lista{
+                margin-bottom: 0;
+            }
+        }
+    }
+}

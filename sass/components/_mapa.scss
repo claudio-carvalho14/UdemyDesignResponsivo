@@ -1,0 +1,29 @@
+.mapa{
+    /* Toda DIV transforma o elemento num bloco e todo bloco (block) ocupa a largura inteira da tela*/
+    /*Gambiarra para tornar conteúdo responsivo*/
+    background-color: $cor-principal;
+    height: 0;
+    padding-bottom: 50%;/*Garante que a proporção do item seja ampliada ou diminuida de acordo com a tela*/
+    position: relative;
+    overflow: hidden;
+    /* O próximo comando faze os elementos colarem nas extremidades do navegador*/
+    margin: 0 -15px -25px -15px;
+    /*Fazendo o mapa ficar ajustado ao tamanho da tela*/
+    @media(min-width: 450px){
+        padding-bottom: 60%;
+    }
+    @media(min-width: $breakpoint-md){
+        padding-bottom: 40%;
+    }
+    @media(min-width: $breakpoint-lg){
+        padding-bottom: 25%;
+    }
+}
+
+.mapa iframe{
+    width: 100% !important;/*Faz com que as propriedades de altura e largura sejam sobrescritas*/
+    height: 100%;
+    position: absolute;
+    top: 0;/*Boas práticas*/
+    left: 0;/*Boas práticas*/
+}

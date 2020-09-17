@@ -1,0 +1,144 @@
+/* BASE*/
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%; /* Fazendo isso a imagem não se propaga para além do seu conteiner, ou seja, não vai ultrapassar o tamanho da tela*/
+    height: auto; /*Impede que a imagem seja redimensionada desproporcionalmente*/
+}
+@font-face{
+    font-family: "Source Sans Pro"; /*Criando nova fonte*/
+    src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf');/*Importando arquivo para a Nova Fonte*/
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-Bold.otf');
+    font-weight: bold;/*Importanto arquivo para a mesma fonte, porém em negrito*/
+}
+@font-face{
+    font-family: "Source Sans Pro";
+    src: url('../fonts/source-sans-pro/SourceSansPro-BoldIt.otf');
+    font-weight: bold;/*Importanto arquivo para a mesma fonte, porém em negrito*/
+    font-style: italic;
+}
+body{
+    font-family: "Source Sans Pro";/*Aplicando fonte importada no Body do documento*/
+}
+
+
+/*Cabeçalho*/
+.cabecalho{
+    background: #ffffff;
+    padding: 15px;
+}
+
+
+/*Logo*/
+.logo{
+    background-image: url("../img/logotipo-preto.png");
+    background-repeat: no-repeat;
+    display: block;
+    width: 120px;
+    height: 53px;
+    text-indent: -9999px;/*Remove o texto do local*/
+    margin: 0;
+}
+.logo--branco{
+    background-image: url("../img/logotipo-branco.png");
+}
+
+
+/*Menu Principal*/
+.menu-principal__btn{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;/*Remove o texto do local*/
+    background-color: #ffffff;
+    background-image: url('../img/menuprincipal-btn-bg.png');
+    background-repeat: no-repeat; /* Príbe a repetição da imagem*/
+    background-position: 5px 5px;/*Distancia 1: Lateral Esquerda / Distancia 2: Topo*/
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px; /*Poe a borda arredondada*/
+    cursor: pointer; 
+    
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.menu-principal__btn--fechar{
+    background-position: -48px 7px;/*Distancia 1: Lateral Esquerda / Distancia 2: Topo*/
+}
+
+.menu-principal_lista{
+    padding: 0; /* Tira o espaçamento da esquerda, automático no li*/
+    list-style: none;
+}
+
+.menu-principal_item{
+    text-decoration: none; /*Tira o sublinhado do link*/
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+}
+
+.menu-principal_item--atual{
+    color: #f44242;
+}
+
+
+/*Rodapé*/
+.rodape{
+    color: #ffffff;
+}
+
+.rodape .logo{
+    margin-bottom: 25px;
+}
+
+.rodape__linha-1{
+    background-color: #272525;
+    background-image: url("../img/rodape-bg.jpg");
+    background-size: cover; /*Faz com que a imagem ocupe toda a página*/
+    padding: 15px;
+    
+}
+
+.rodape__linha-2{
+    background-color: #000000;
+    text-align: center;
+    padding: 15px;
+}
+
+.rodape__colunas{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.rodape__titulo{
+    border-bottom: 1px solid #ffffff;
+    padding: 0 10px 10px 10px; /*Os valores seguem sentido horário: Topo, direita, baixo e esquerda.*/
+    font-size: 18px;
+}
+
+.rodape__lista-links{
+    padding: 0;
+    list-style: none;
+}
+
+.rodape__lista-links__item{
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block; /*Necessário para que o Margin-Bottom seja aplicado*/
+}
+
+.rodape__lista-links__item::before{ /* Pseudoclasse para atributo*/
+    content: '>'; /* Aplica o símbolo '>' no conteúdo*/
+    margin-right: 8px;
+    color: #f44242;
+}

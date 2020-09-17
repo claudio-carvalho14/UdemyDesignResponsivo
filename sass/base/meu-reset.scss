@@ -1,0 +1,11 @@
+/* BASE*/
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%; /* Fazendo isso a imagem não se propaga para além do seu conteiner, ou seja, não vai ultrapassar o tamanho da tela*/
+    height: auto; /*Impede que a imagem seja redimensionada desproporcionalmente*/
+}
+body{
+    font-family: "Source Sans Pro";/*Aplicando fonte importada no Body do documento*/
+}

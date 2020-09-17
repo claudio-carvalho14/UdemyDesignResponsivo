@@ -1,0 +1,23 @@
+.lista-trabalhos{
+    list-style: none;/*Tira os pontinhos antes dos itens*/
+    padding: 0;/*Tira o espaçamento automático do item*/
+
+}
+
+.lista-trabalhos__item{
+    margin-right: -15px;/*Vai encostar a imagem na canto da página*/
+    margin-left: -15px;/*Vai encostar a imagem na canto da página*/
+    margin-bottom: 50px;
+}
+
+.lista-trabalhos__item a{
+    text-decoration: none;/*Tira a cor e o sublinhado automático da tag A*/
+}
+
+.lista-trabalhos__titulo{
+    color: #000000;
+    font-size: 18px;
+    margin-left: 15px;
+    border-left: 1px solid #000000;
+    padding-left: 10px;
+}

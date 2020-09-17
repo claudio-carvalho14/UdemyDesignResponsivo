@@ -1,0 +1,80 @@
+.lista-trabalhos{
+    list-style: none;/*Tira os pontinhos antes dos itens*/
+    padding: 0;/*Tira o espaçamento automático do item*/
+    margin-top: 70px;
+    @media(min-width: $breakpoint-md){
+        .lista-trabalhos__item{
+            margin:0;
+            float: left;
+            width: 50%;
+            background-color: $cor-principal;
+            overflow: hidden;
+            &:hover{
+                .lista-trabalhos__img{
+                    opacity: 0.1;
+                    transform: scale(1.8);/*(Aumenta o tamanho da imagem*/
+                }
+                .lista-trabalhos__titulo{
+                    opacity: 1;
+                }
+            }
+        }
+        .lista-trabalhos__img{
+            opacity: 1;
+            transition: all 600ms ease;
+        }
+        .lista-trabalhos__titulo{
+            color: white;
+            padding: 0;
+            margin: 0;
+            border: none;
+            text-align: center;
+            /*Os 3 comandos abaixo servem para posicionar o texto sobre a imagem*/
+            position: absolute;
+            top: 30%;/*Ou 100px*/
+            left: 0px;
+            width: 100%;
+            background: url('../img/icone-olho.png') no-repeat bottom  center;
+            padding: 35px;/*Separa o olho do título*/
+            font-size: 22px;
+            opacity: 0;/*Opacity: 0 significa que a imagem some. 1 que ela aparece. Entre 0 e 1
+            cria-se o sombreamento*/
+            transition: opacity 200ms ease;
+        }
+    }
+    @media(min-width: $breakpoint-lg){
+        .lista-trabalhos__item{
+            margin:0;
+            float: left;
+            width: 33.333%;
+        }
+
+    }
+
+}
+
+.lista-trabalhos__item{
+    margin-right: -15px;/*Vai encostar a imagem na canto da página*/
+    margin-left: -15px;/*Vai encostar a imagem na canto da página*/
+    margin-bottom: 50px;
+    position: relative;/*Serve para ajudar o texto a ficar sobre a imagen
+    em no Media Query .lista-trabalhos__titulo*/
+}
+
+.lista-trabalhos__item a{
+    text-decoration: none;/*Tira a cor e o sublinhado automático da tag A*/
+}
+
+.lista-trabalhos__img{
+    width: 100%;/*Faz  com que as imagens ocupem 100% dos 50%
+    configurados no width do MEDIA QUERY do .lista-trabalhos*/
+    height: auto;
+    display: block;/*Faz com que a imagem vire um bloco (remove uma linha que fica embaixo da imagem)*/
+}
+.lista-trabalhos__titulo{
+    color: #000000;
+    font-size: 18px;
+    margin-left: 15px;
+    border-left: 1px solid #000000;
+    padding-left: 10px;
+}

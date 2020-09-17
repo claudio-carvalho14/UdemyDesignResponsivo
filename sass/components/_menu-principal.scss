@@ -1,0 +1,63 @@
+/*Menu Principal*/
+.menu-principal__btn{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -9999px;/*Remove o texto do local*/
+    background-color: #ffffff;
+    background-image: url('../img/menuprincipal-btn-bg.png');
+    background-repeat: no-repeat; /* Proíbe a repetição da imagem*/
+    background-position: -48px 7px;/*Distancia 1: Lateral Esquerda / Distancia 2: Topo*/
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px; /*Poe a borda arredondada*/
+    cursor: pointer; 
+    
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    @media(min-width: $breakpoint-md){
+        display: none;
+    }
+}
+.menu-principal_lista{
+    padding: 0; /* Tira o espaçamento da esquerda, automático no li*/
+    list-style: none;
+    transition: margin 200ms ease-out;
+    @media(min-width: $breakpoint-md){
+        li{
+            display: inline-block;
+            margin: 0 10px;
+        }    
+    }   
+}
+
+.menu-principal_item{
+    text-decoration: none; /*Tira o sublinhado do link*/
+    font-weight: bold;
+    color: #343434;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 18px;
+    height: 20px;
+    transition: all 200ms ease-out;
+}
+
+.menu-principal_item--atual{
+    color: $cor-principal;
+}
+@media(max-width: $breakpoint-md - 1){/*Operação matemática que diminuiu 1px do breakpoint*/
+    .menu-principal--fechado{
+        .menu-principal__btn{
+            background-position: 5px 5px;/*Distancia 1: Lateral Esquerda / Distancia 2: Topo*/
+        }
+        .menu-principal_lista{
+            margin: 0;
+        }
+        .menu-principal_item{
+            margin: 0;
+            height: 0;
+            overflow: hidden;/*Evita que os itens do menu se sobreponham*/
+        }
+    }
+}
